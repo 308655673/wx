@@ -1,4 +1,5 @@
 <!-- 常用标记 -->
+
 <view class="{{meg}}">块状元素</view>
 <text>行内元素</text>
 <image src="../../images/01.png"></image>
@@ -27,8 +28,17 @@
 
 <view>{{meg}}</view>
 <view>123</view>
+
+引入其他页面的模板内容：
+<import src="../classify/classify.wxml"></import>
+<template is="def" data="{{x:meg,y:num}}"></template>
+
 <view>{{meg}}</view>
 <view>123</view>
+
+引入其他页面所有内容
+<include src="../classify/classify.wxml"></include>
+
 <view>{{meg}}</view>
 <view>123</view>
 <view>{{meg}}</view>

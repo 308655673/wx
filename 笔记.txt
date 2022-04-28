@@ -62,4 +62,19 @@ js中通过module.exports暴露部分数据给外部使用
 页面中通过 require("../../mokuai.js") 加载模块内容
 
 
+模板：写在页面内的组件
+页面内通过<template name="xxx"></template>创建xxx模板
+通过<template is="xxx"></template>使用xxx模板
+
+
+引用：写在其他页面内的模板
+
+页面内使用微信的js：
+<wxs src="../../wx.wxs" module="wxjs" />
+{{wxjs.obj.a}}
+
+
+
+
+
 

@@ -1,3 +1,55 @@
 <!--pages/classify/classify.wxml-->
-<text>pages/classify/classify.wxml</text>
+
+<wxs src="../../wx.wxs" module="wxjs" />
+{{wxjs.obj.a}}
+
+<view>分类页</view>
+
+<template is="def" data="{{x:123,y:456}}">使用模板</template>
+
+<view>正常内容</view>
+
+<template name="def">
+模板内容--{{x}}--{{y}}
+</template>
+
+组件：
+<swiper autoplay="true" interval="3000" circular="true" indicator-dots="{{bool}}" bindchange="picturn">
+  <swiper-item>
+    <image src="../../images/01.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/02.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/03.png"></image>
+  </swiper-item>
+</swiper>
+
+<progress percent="{{num}}" stroke-width="10"/>
+
+<rich-text nodes="<b><i><u>加粗文字</u></i></b>"></rich-text>
+
+<navigator url="../details/details?a=123&b=456">导航标记(四种不同模式+后退)</navigator>
+
+<match-media min-width="300" max-width="400">
+  <view>当页面宽度在 300 ~ 400 px 之间时展示这里</view>
+</match-media>
+
+<movable-area class="box">
+  <movable-view direction="all" out-of-bounds="true" disabled="{{bool}}" bindchange="picturn"></movable-view>
+</movable-area>
+
+<scroll-view class="scroll" scroll-y="true" bindscroll="picturn" bindscrolltolower="dibu" refresher-enabled="true" refresher-triggered="{{xiala}}" bindrefresherrefresh="add">
+<view wx:for="{{arr}}">{{item}}</view>
+</scroll-view>
+
+<view bindtap="off">
+
+<icon type="success" color="{{on?'red':'grey'}}" size="50"></icon>
+
+<icon type="success" color="red" size="50" wx:if="{{on}}"></icon>
+<icon type="success" color="grey" size="50" wx:else></icon>
+点击切换
+</view>
 
