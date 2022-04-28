@@ -1,0 +1,20 @@
+/* pages/home/home.wxss 
+rpx  100rpx  750   100px
+     100rpx  375    50px
+*/
+view{  
+  background-color: orange;
+}
+.hello{
+  width: 200rpx;
+  height: 200rpx;
+}
+image{
+  width: 100rpx;
+  height: 100rpx;
+}
+input{
+  border: 1px solid red;
+  width: 50%;
+  margin: 0 auto;
+}

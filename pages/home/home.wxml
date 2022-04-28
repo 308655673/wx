@@ -1,0 +1,62 @@
+<!-- 常用标记 -->
+<view class="{{meg}}">块状元素</view>
+<text>行内元素</text>
+<image src="../../images/01.png"></image>
+<input type="text" value="{{meg}}" />
+
+<!-- 数据绑定 -->
+{{bool}}
+{{bool?meg:""}}--{{num+1}}
+{{arr[2].tit}}
+
+<!-- 循环遍历渲染 及 自定义属性遍历 -->
+<view wx:for="{{arr}}" wx:key="item">{{index}}---{{item.tit}}</view>
+<block wx:for="{{arr}}" wx:for-index="i" wx:for-item="v" wx:key="v" >{{i}}---{{v.tit}}</block>
+
+<!-- 条件渲染 -->
+<view wx:if="{{bool}}">123</view>
+<view wx:else>456</view>
+
+<!-- bindzhi 绑定自定义事件zhi进行监听 -->
+<abc mn="{{meg}}" bindzhi="zujian"></abc>
+
+<!-- 绑定点击事件及事件传值 -->
+<view bindtap="maopao" data-gen="男">
+  <button bindtap="turn" data-name="张三" data-age="18">点击切换bool值</button>
+</view>
+
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+<view>123</view>
+<view>{{meg}}</view>
+
+
+
+
