@@ -1,2 +1,27 @@
 <!--pages/details/details.wxml-->
-<text>pages/details/details.wxml</text>
+
+<image src="{{pic}}"></image>
+<view bindtap="test">测试</view>
+
+
+
+
+<text>详情页----------------------------------</text>
+<input type="text" bindinput="keycode" />
+<button>按钮</button>
+<radio-group bindchange="choose">
+  <radio value="a">111</radio>
+  <radio value="b">222</radio>
+  <radio value="c">333</radio>
+</radio-group>
+
+<picker mode="date" start="2022-01-01" end="2022-12-31" value="2022-04-29" bindchange="choose">点击选择</picker>
+
+<switch color="grey" checked="{{bool}}"></switch>
+
+<camera device-position="back" style="width: 750rpx; height: 200px;"></camera>
+<button bindtap="takepic">拍照</button>
+
+<map longitude="113" latitude="28" scale="{{num}}">
+  <cover-view>123456789</cover-view>
+</map>

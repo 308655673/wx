@@ -48,7 +48,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("加载")
+    console.log("加载",options)
   },
 
   /**
@@ -63,6 +63,18 @@ Page({
    */
   onShow: function () {
     console.log("显示")
+    // wx.setTabBarBadge({
+    //   index:2,
+    //   text:"10"
+    // })
+
+    // wx.hideTabBar()
+
+    // wx.setTabBarItem({
+    //   index:1,
+    //   text:"classify"
+    // })
+
   },
 
   /**

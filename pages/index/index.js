@@ -17,7 +17,8 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad() {
+  onLoad(options) {
+    console.log(options)
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true

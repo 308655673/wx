@@ -1,8 +1,8 @@
 {
-  "pages": [
-    "pages/classify/classify",    
-    "pages/details/details",
+  "pages": [  
     "pages/home/home",
+    "pages/details/details",
+    "pages/classify/classify",  
     "pages/mine/mine",
     "pages/shop/shop",
     "pages/index/index",
