@@ -29,7 +29,7 @@
 <view>{{meg}}</view>
 <view>123</view>
 
-引入其他页面的模板内容：
+引入其他页面的模板内容：（模板页面有事件，该页面没有，报警告提示）
 <import src="../classify/classify.wxml"></import>
 <template is="def" data="{{x:meg,y:num}}"></template>
 

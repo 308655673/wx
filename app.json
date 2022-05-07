@@ -1,10 +1,10 @@
 {
   "pages": [  
+    "pages/shop/shop",
     "pages/home/home",
     "pages/details/details",
     "pages/classify/classify",  
     "pages/mine/mine",
-    "pages/shop/shop",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -40,5 +40,10 @@
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "111111111111111111"
+    }
+  }
 }
