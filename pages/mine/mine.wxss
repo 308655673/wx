@@ -1,1 +1,6 @@
 /* pages/mine/mine.wxss */
+.box{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+}
