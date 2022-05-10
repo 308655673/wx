@@ -3,6 +3,13 @@
 <button bindtap="read">读取数据</button>
 <button bindtap="del">删除数据</button>
 <button bindtap="change">更新数据</button>
+<button bindtap="yunlogin" data-test="测试携带参数">云函数登录</button>
+<button bindtap="yunget" data-obj="{{test}}">云函数获取数据</button>
+
+<image src="cloud://cloud1-7gjq9owx32373562.636c-cloud1-7gjq9owx32373562-1306268956/01.png"></image>
+<button bindtap="downfile">云储存下载</button>
+<button bindtap="upfile">云储存上传</button>
+<button bindtap="delfile">云储存删除</button>
 
 <view class="box" animation="{{move}}"></view>
 <button bindtap="start">动画</button>

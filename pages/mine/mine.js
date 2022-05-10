@@ -13,7 +13,85 @@ Page({
    */
   data: {
     num: 1,
-    move: null
+    move: null,
+    test: {
+      age: _.gte(17)
+    }
+  },
+  delfile(){
+    //云储存删除
+    wx.cloud.deleteFile({
+      fileList:[
+        "cloud://cloud1-7gjq9owx32373562.636c-cloud1-7gjq9owx32373562-1306268956/123.jpg",
+        "cloud://cloud1-7gjq9owx32373562.636c-cloud1-7gjq9owx32373562-1306268956/FDQPCneNOPzZ6b50227bd4b3e9ff651c4c98423262c6.png"
+      ],
+      success(){
+        console.log("删除成功")
+      }
+    })
+  },
+  upfile(){
+    //选择文件
+    wx.chooseImage({
+      count: 1,
+    }).then(res=>{
+      console.log(res)
+      let filename=res.tempFilePaths[0].substr(11)
+      //文件上传并设置保存名
+      wx.cloud.uploadFile({
+        filePath:res.tempFilePaths[0],
+        cloudPath:filename
+      })
+    })
+
+   
+  },
+  downfile() {
+
+    wx.showLoading({
+      title: '下载中...',
+    })
+
+    //云存储下载
+    wx.cloud.downloadFile({
+      fileID: "cloud://cloud1-7gjq9owx32373562.636c-cloud1-7gjq9owx32373562-1306268956/node-object.rar"
+    }).then(res => {
+
+      //保存文件到本地
+      let save=wx.getFileSystemManager()
+      save.saveFile({
+        tempFilePath: res.tempFilePath,
+        success(){
+           wx.hideLoading()
+        }
+      })
+    })
+
+  },
+  yunget() {
+    //使用云函数获取数据可避开权限问题，以及突破20条限制（100）
+    wx.cloud.callFunction({
+      name: "get"
+    }).then(res => {
+      console.log(res)
+    })
+  },
+  yunlogin(event) {
+    // 使用云函数登录，获取用户openid
+    // 需要在project.config.json配置云函数存放目录
+
+    // console.log(event.target.dataset.test)
+
+    wx.cloud.callFunction({
+      name: "login",
+      data: {
+        a: event.target.dataset.test,
+        b: 456
+      }
+    }).then(res => {
+      console.log(res)
+    })
+
   },
   add() {
     //关联云环境(局部关联，仅当前函数范围有效)
